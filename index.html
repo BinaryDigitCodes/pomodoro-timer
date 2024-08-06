@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" href="pomodoro.css">
+        <link rel="stylesheet" href="https://unpkg.com/papercss@latest/dist/paper.min.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="asset/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="asset/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="asset/favicon-16x16.png">
+        <link rel="manifest" href="asset/site.webmanifest">
+    </head>
+    <body>
+        <div class="paper" id="container">
+            <h4>Pomodoro Timer</h4>
+            <div id="timer">
+                <label id="timerText"></label>
+            </div>
+
+            <div id="controls">
+                <button class="btn-danger-outline" name="work" onclick="countdown(1500);">Work</button>
+                <button class="btn-success-outline" name="shortBreak" onclick="countdown(300);">Short Break</button>
+                <button class="btn-secondary-outline" name="longBreak" onclick="countdown(900);">Long Break</button>
+                <button class="btn-block btn-primary-outline" name="stop" onclick="stopTimer();">STOP</button>
+            </div>
+
+            <audio id="alarm" src="asset/alarm-clock-short.mp3" preload="auto"></audio>
+            <script src="pomodoro.js"></script>
+
+        </div>
+
+    <footer>
+        <a href="https://github.com/SpectacledBear/pomodoro-timer">Pomodoro-timer</a> and <a href="https://getpapercss.com">PaperCSS</a>.
+    </footer>
+    </body>
+</html>
